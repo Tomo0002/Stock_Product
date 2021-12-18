@@ -15,13 +15,13 @@ from pathlib import Path
 from sys import stdin
  
 # header = 0で各項目の題名を取得する　確認方法print(df.head(3))で項目が出力されるかどうか
-df = pd.read_csv("", header= 0)
+df = pd.read_csv(".csv", header= 0)
 # df = pd.DataFrame(data=df)
 # print(df.head(3))
 # print(df.columns)
 
 # 読み込む列を指定
-# df = pd.read_csv("D:\All Code File\Python\Excel Date List\安定在庫量.csv", usecols=[0,2])
+# df = pd.read_csv(".csv", usecols=[0,2])
 # print(df)
 
 # 条件指定・抽出
@@ -57,7 +57,7 @@ Ave_Sales = average(df["Number_Of_Sales"])
 print(f"平均売上個数{Ave_Sales.round(2)}")
 
 # CSVに出力
-# df.to_csv("D:\\All Code File\\Python\\Excel Date List\\安定在庫量.csv")
+# df.to_csv(".csv")
 
 
 # 結果を四捨五入する
