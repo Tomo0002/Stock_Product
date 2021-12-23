@@ -13,16 +13,18 @@ from pandas.core import construction
 from pandas.io.parsers import read_csv
 from pathlib import Path
 from sys import stdin
+
+# from app import index
  
 # header = 0で各項目の題名を取得する　確認方法print(df.head(3))で項目が出力されるかどうか
-df = pd.read_csv(".csv", header= 0)
+df = pd.read_csv("D:/Stock_Product_py/安定在庫量.csv", header= 0)
 # df = pd.DataFrame(data=df)
 # print(df.head(3))
 # print(df.columns)
 
 # 読み込む列を指定
 # df = pd.read_csv(".csv", usecols=[0,2])
-# print(df)
+# print(str(index),df)
 
 # 条件指定・抽出
 # print(df[df["Number_Of_Stock"] > 100])

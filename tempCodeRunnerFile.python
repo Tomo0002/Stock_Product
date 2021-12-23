@@ -1,0 +1,6 @@
+import pandas as pd
+
+index = 1
+df = pd.read_csv("D:/Stock_Product_py/安定在庫量.csv", header= 3)
+print(str(index),df)
+
