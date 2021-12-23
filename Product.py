@@ -18,11 +18,12 @@ from sys import stdin
 # from app import index
  
 # header = 0で各項目の題名を取得する　確認方法print(df.head(3))で項目が出力されるかどうか
-df = pd.read_csv("D:/Stock_Product_py/安定在庫量.csv", header= 0)
+df = pd.read_csv("D:/Hub/Stock_Product_file/Data.csv")
 df_temperature_Hyo = pd.read_csv("D:/Hub/Stock_Product_file/Hyogo_Temle_data.csv", encoding = "utf-8")
 df_temperature_Osa = pd.read_csv("D:/Hub/Stock_Product_file/Osaka_Temle_Data.csv", encoding = "utf-8")
 # print(df.head(1))
 # print(df.columns)
+# print(df)
 
 # 読み込む列を指定
 # df = pd.read_csv(".csv", usecols=[0,2])
@@ -37,8 +38,6 @@ df_temperature_Osa = pd.read_csv("D:/Hub/Stock_Product_file/Osaka_Temle_Data.csv
 # str_datesalle = f'{date} {salle}個'
 # print(str_datesalle)
 
-# 結合
-
 # 条件分岐
 Stocksituation = [
     (df["Number_Of_Stock"] == 0),
@@ -47,8 +46,19 @@ Stocksituation = [
     (df["Number_Of_Stock"] >= 72)   
  ]
 
-choicelist = ['Out_Of_Stock','order', 'attention', 'safe',]
+choicelist = ['Out_Of_Stock','order', 'attention', 'safe']
 df["Stock_Status"] = np.select(Stocksituation, choicelist, default="Non")
+
+Stocksituation = [       
+    (df["Highes_Temperature"] < 25),
+    (df["Highes_Temperature"] >= 25) & (df["Highes_Temperature"] <= 30),
+    (df["Highes_Temperature"] >= 30)
+ ]
+
+choicelist = ['Safe','attention','Out_Of_Stock']
+df["Sales_Forecast"] = np.select(Stocksituation, choicelist, default="Non")
+
+
 print(df)
 print("--------------------------------------------------------")
 
@@ -64,8 +74,7 @@ print(f"平均売上個数{Ave_Sales.round(2)}")
 
 
 # CSVに出力
-# df.to_csv(".csv")
-
+# df.to_csv("Data.csv", encoding = "utf-8")
 
 # 結果を四捨五入する
 # print(data.describe().round(2))
