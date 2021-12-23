@@ -74,7 +74,7 @@ print(f"平均売上個数{Ave_Sales.round(2)}")
 
 
 # CSVに出力
-df.to_csv("Data.csv", encoding = "utf-8")
+# df.to_csv("Data.csv", encoding = "utf-8")
 
 # 結果を四捨五入する
 # print(data.describe().round(2))
