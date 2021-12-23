@@ -10,6 +10,7 @@ import math
 import pprint
 import csv
 from pandas.core import construction
+from pandas.core.reshape.merge import merge
 from pandas.io.parsers import read_csv
 from pathlib import Path
 from sys import stdin
@@ -18,8 +19,9 @@ from sys import stdin
  
 # header = 0で各項目の題名を取得する　確認方法print(df.head(3))で項目が出力されるかどうか
 df = pd.read_csv("D:/Stock_Product_py/安定在庫量.csv", header= 0)
-# df = pd.DataFrame(data=df)
-# print(df.head(3))
+df_temperature_Hyo = pd.read_csv("D:/Hub/Stock_Product_file/Hyogo_Temle_data.csv", encoding = "utf-8")
+df_temperature_Osa = pd.read_csv("D:/Hub/Stock_Product_file/Osaka_Temle_Data.csv", encoding = "utf-8")
+# print(df.head(1))
 # print(df.columns)
 
 # 読み込む列を指定
@@ -34,6 +36,8 @@ df = pd.read_csv("D:/Stock_Product_py/安定在庫量.csv", header= 0)
 # salle = df["Number_Of_Sales"][0]
 # str_datesalle = f'{date} {salle}個'
 # print(str_datesalle)
+
+# 結合
 
 # 条件分岐
 Stocksituation = [
@@ -57,6 +61,7 @@ print(f"最高販売数:{Max_Sale}")
 
 Ave_Sales = average(df["Number_Of_Sales"])
 print(f"平均売上個数{Ave_Sales.round(2)}")
+
 
 # CSVに出力
 # df.to_csv(".csv")
