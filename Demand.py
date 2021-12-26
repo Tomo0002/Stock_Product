@@ -60,9 +60,12 @@ def main():
     a = clf.coef_
     b = clf.intercept_
 
+    # グラフを表示する場合
     print("回帰係数:" , a)
     print("切片: ", b)
     print("決定係数: ", clf.score(x, y))
+    
+    # グラフを表示せず結果のみ知りたい場合
     # print("回帰係数:" , clf.coef_)
     # print("切片: ", clf.intercept_)
     # print("決定係数: ", clf.score(x, y))
