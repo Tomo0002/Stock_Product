@@ -48,8 +48,8 @@ def main():
 
     clf = linear_model.LinearRegression()
 
-    x = df_x.loc[:, ["Number_Of_Sales", "Highes_Temperature"]].values
-    y = df_y["Number_Of_Sales"].values
+    x = df_x.loc[:, ["Highes_Temperature", "Number_Of_Sales"]].values
+    y = df_y["Highes_Temperature"].values
 
 # 予測
 # X2 = [[df_x] for x in df_x]
