@@ -46,35 +46,16 @@ def main():
 # arr = df_y.values
 # print(type(arr))
 
-# print(test.info())
-# print(train.info())
-# df_x.plot()
-# plt.show()
-
-# x_train = pd.get_dummies(train)
-# y_train = train["y"]
-
-# model.fit(x_train, y_train)
-
-# model.coef_
-# model.intercept_
-
-# train.plot()
-# plt.show()
-
     clf = linear_model.LinearRegression()
 
     x = df_x.loc[:, ["Number_Of_Sales", "Highes_Temperature"]].values
     y = df_y["Number_Of_Sales"].values
+
+# 予測
 # X2 = [[df_x] for x in df_x]
 
 
     clf.fit(x, y)
-
-
-# print("回帰係数:" , clf.coef_)
-# print("切片: ", clf.intercept_)
-# print("決定係数: ", clf.score(x, y))
 
     a = clf.coef_
     b = clf.intercept_
@@ -82,6 +63,9 @@ def main():
     print("回帰係数:" , a)
     print("切片: ", b)
     print("決定係数: ", clf.score(x, y))
+    # print("回帰係数:" , clf.coef_)
+    # print("切片: ", clf.intercept_)
+    # print("決定係数: ", clf.score(x, y))
 
     plt.scatter(df_x, df_y , color="blue")
     plt.plot(df_x,(a* df_x + b), color="green")
