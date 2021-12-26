@@ -1,19 +1,22 @@
 #%%
+import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 from os import read
 from numpy.core.fromnumeric import mean
 from numpy.lib.function_base import average, select
-import pandas as pd
-import numpy as np
-import math
 import pprint
 import csv
+from flask import Flask
 from pandas.core import construction
 from pandas.core.reshape.merge import merge
 from pandas.io.parsers import read_csv
 from pathlib import Path
 from sys import stdin
+import requests
+from bs4 import BeautifulSou
+
 
 # from app import index
  

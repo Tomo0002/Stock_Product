@@ -3,13 +3,11 @@ import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
 from sklearn.linear_model import LinearRegression as LR
-from sklearn import linear_model
 import joblib
 import matplotlib as mpl
 from os import read
 from numpy.core.fromnumeric import mean
 from numpy.lib.function_base import average, select
-import math
 import pprint
 import csv
 from pandas.core import construction
@@ -25,16 +23,18 @@ sample = pd.read_csv("D:/Hub/Stock_Product_file/Sample.csv", header=None)
 
 # print(test.info())
 # print(train.info())
+train.plot()
+plt.show()
 
-x_train = pd.get_dummies(train)
-y_train = train["y"]
+# x_train = pd.get_dummies(train)
+# y_train = train["y"]
 
-model = LR()
+# model = LR()
 
-model.fit(x_train, y_train)
+# model.fit(x_train, y_train)
 
-model.coef_
-model.intercept_
+# model.coef_
+# model.intercept_
 
 # train.plot()
 # plt.show()
