@@ -1,2 +1,2 @@
-    plt.xlim(0, 40)
-    plt.ylim(0,30)
+plt.xlim(0, 50)
+# plt.ylim(0,50)
