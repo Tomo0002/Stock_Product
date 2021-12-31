@@ -8,18 +8,17 @@ import datetime
 import requests
 import io
 
+import datetime
+
 
 # データ取得
 df = pd.read_csv("Data\売上データ.csv")
-url = "https://www.data.jma.go.jp/obd/stats/data/mdrr/tem_rct/alltable/mxtemsadext00_rct.csv"
-r = requests.get(url).content
-df_1 = pd.read_csv(io.BytesIO(r), sep = ";")
+
+# 気象データを取得　(作成中)
+# url = "https://www.data.jma.go.jp/obd/stats/data/mdrr/tem_rct/alltable/mxtemsadext00_rct.csv"
+# r = requests.get(url).content
+# df_1 = pd.read_csv(io.BytesIO(r), sep = ";")
 # ↑　https://ibuki-study.net/csv_from_url_by_python/
-# df_temperature_Hyo = pd.read_csv("Data\Hyogo_Temle_data.csv", encoding = "utf-8")
-# df_temperature_Osa = pd.read_csv("Data\data_Oskaka.csv", usecols=[3])
-#   print(df.head(1))
-# print(df.columns)
-# print(df)
 
 
 # 条件指定・抽出
@@ -36,11 +35,13 @@ df_1 = pd.read_csv(io.BytesIO(r), sep = ";")
 # choicelist = ['欠品','注文', '注意', '安全']
 # df["Stock_Status"] = np.select(Stocksituation, choicelist, default="Non")
 
-# print(df)
-print(df_1)
+print(df)
+
+# 気象データ
+# print(df_1)
 print("--------------------------------------------------------")
 
-# print(f"更新時間: {datetime.datetime.now()}")
+print(f"更新時間: {datetime.datetime.now()}")
 
 # 計算
 Sum_Sales = sum(df["売上個数"])
