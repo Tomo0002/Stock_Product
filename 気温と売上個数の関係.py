@@ -1,17 +1,9 @@
 # %%
 import pandas as pd
+from pandas.io.parsers import read_csv
 import numpy as np
 from matplotlib import pyplot as plt
-from sklearn.linear_model import LinearRegression as LR
 from sklearn import linear_model
-import joblib
-import matplotlib as mpl
-from numpy.core.fromnumeric import mean
-import pprint
-import csv
-from pandas.io.parsers import read_csv
-from pathlib import Path
-from sys import stdin
 
 
 df_x = read_csv("Data\売上データ.csv", usecols=[1, 2], encoding='utf-8')
@@ -42,11 +34,9 @@ df_y = read_csv("Data\Test.csv", usecols=[1, 2], encoding='utf-8')
 model = linear_model.LinearRegression()
 
 # 当てはめるデータ
-x = df_x.loc[:,["売上個数", "最高気温"]].values
-y = df_y["最高気温"].values
-
-# 予測
-# X2 = [[df_x] for x in df_x]
+# x = df_x.loc[:,["最高気温","売上個数"]].values
+x = df_x.loc[:,["売上個数","最高気温"]].values
+y = df_y["売上個数"].values
 
 model.fit(x, y)
 
@@ -68,14 +58,14 @@ print("決定係数: ", model.score(x, y))
 # df_y.plot(kind='bar')
 
 # メモリの範囲指定
-# plt.xlim(0, 50)
-# plt.ylim(0,50)
+# plt.xlim(0,150)
+# plt.ylim(0,140)
 
 # 散布図
 plt.scatter(df_x, df_y , color="blue")
 
 # 回帰直線
-plt.plot(df_x,(a* df_x + b), color="green")
+plt.plot(df_x,(a* df_x + b), color="red")
 
 
 plt.show()
