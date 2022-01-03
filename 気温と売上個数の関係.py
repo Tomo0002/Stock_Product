@@ -1,8 +1,11 @@
 # %%
 import pandas as pd
 from pandas.io.parsers import read_csv
+
 import numpy as np
+
 from matplotlib import pyplot as plt
+
 from sklearn import linear_model
 
 
@@ -34,7 +37,6 @@ df_y = read_csv("Data\Test.csv", usecols=[1, 2], encoding='utf-8')
 model = linear_model.LinearRegression()
 
 # 当てはめるデータ
-# x = df_x.loc[:,["最高気温","売上個数"]].values
 x = df_x.loc[:,["売上個数","最高気温"]].values
 y = df_y["売上個数"].values
 
