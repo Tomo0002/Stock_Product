@@ -39,5 +39,5 @@ x_test = x_test.astype
 
 
 
-url= "https://qiita.com/tanakadaichi_1989/items/c655d93a1fae56f2be07"
-url = "https://qiita.com/takahiro_itazuri/items/d2bea1c643d7cca11352"
+# url= "https://qiita.com/tanakadaichi_1989/items/c655d93a1fae56f2be07"
+# url = "https://qiita.com/takahiro_itazuri/items/d2bea1c643d7cca11352"
