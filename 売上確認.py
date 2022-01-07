@@ -49,7 +49,7 @@ MAX_TEMPERATURE = max(df["最高気温"])
 print(f"最高気温:{MAX_TEMPERATURE}℃")
 
 AVERAGE_TEMPERATURE = average(df["最高気温"])
-print(f"平均気温(最高):{AVERAGE_TEMPERATURE}℃")
+print(f"平均気温(最高):{AVERAGE_TEMPERATURE.round(1)}℃")
 
 # 計算
 Sum_Sales = sum(df["売上個数"])
