@@ -16,15 +16,15 @@ df = pd.read_csv("Data\売上データ.csv")
 # print(df[df["在庫量"] > 100])
 
 # 条件分岐
-# Stocksituation = [
-#     (df["在庫量"] == 0),
-#     (df["在庫量"] < 24),
-#     (df["在庫量"] >= 24) & (df["在庫量"] <= 72),
-#     (df["在庫量"] >= 72)   
-# ]
+Stocksituation = [
+    (df["在庫量"] == 0),
+    (df["在庫量"] < 24),
+    (df["在庫量"] >= 24) & (df["在庫量"] <= 72),
+    (df["在庫量"] >= 72)   
+]
 
-# choicelist = ['欠品','注文', '注意', '安全']
-# df["在庫状況"] = np.select(Stocksituation, choicelist, default="Non")
+choicelist = ['欠品','注文', '注意', '安全']
+df["在庫状況"] = np.select(Stocksituation, choicelist, default="Non")
 
 print(df)
 
