@@ -7,7 +7,6 @@ from pydantic import BaseModel
 from sklearn.ensemble import RandomForestClassifier
 from pydantic import BaseModel
 import joblib
-import Data
 # from fastapi.responses import HTMLResponse
 # import pickle
 
