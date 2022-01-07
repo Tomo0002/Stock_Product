@@ -5,10 +5,6 @@ from numpy.lib.function_base import average, select
 from pandas.io.parsers import read_csv
 
 import datetime
-import requests
-import io
-
-import datetime
 
 
 # データ取得
