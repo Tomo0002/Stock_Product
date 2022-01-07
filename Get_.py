@@ -8,4 +8,5 @@ querystring = {
 "count":"500", # データ取得数
 "apikey":"xxxx" # xxxxはアカウント設定で取得したAPIキー
 }
-response = requests.request( “GET”, url, params=querystring )
+
+# response = requests.request( “GET”, url, params=querystring )
