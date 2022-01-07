@@ -12,7 +12,7 @@ df = pd.read_csv("Data\売上データ.csv")
 # ↑　https://ibuki-study.net/csv_from_url_by_python/
 
 
-# 条件指定・抽出
+# 条件指定
 # print(df[df["在庫量"] > 100])
 
 # 条件分岐
