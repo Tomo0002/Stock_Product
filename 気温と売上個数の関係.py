@@ -69,6 +69,6 @@ plt.scatter(df_x, df_y , color="blue")
 # 回帰直線
 plt.plot(df_x,(a* df_x + b), color="red")
 
-
+# 表示
 plt.show()
 
