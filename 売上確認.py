@@ -53,7 +53,7 @@ print(f"平均気温(最高):{AVERAGE_TEMPERATURE.round(1)}℃")
 
 # 計算
 Sum_Sales = sum(df["売上個数"])
-print(f"売上個数:{Sum_Sales}個")
+print(f"年間売上個数:{Sum_Sales}個")
 
 Max_Sale = max(df["売上個数"])
 print(f"最高販売数:{Max_Sale}個")
