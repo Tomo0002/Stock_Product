@@ -51,9 +51,9 @@ print("切片: ", b)
 print("決定係数: ", model.score(x, y))
 
 # グラフを表示せず結果のみ知りたい場合
-# print("回帰係数:" , clf.coef_)
-# print("切片: ", clf.intercept_)
-# print("決定係数: ", clf.score(x, y))
+# print("回帰係数:" , model.coef_)
+# print("切片: ", model.intercept_)
+# print("決定係数: ", model.score(x, y))
 
 # 棒グラフ
 # df_x.plot(kind='bar')
