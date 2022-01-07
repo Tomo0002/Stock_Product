@@ -1,8 +1,7 @@
 import pandas as pd
 
-import numpy as np
-from numpy.lib.function_base import average, select
-from pandas.io.parsers import read_csv
+from numpy.lib.function_base import average
+
 
 import datetime
 
