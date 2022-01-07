@@ -1,10 +1,6 @@
 import pandas as pd
-
-from numpy.lib.function_base import average
-
-
 import datetime
-
+from numpy.lib.function_base import average
 
 # データ取得
 df = pd.read_csv("Data\売上データ.csv")
