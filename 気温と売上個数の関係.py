@@ -1,5 +1,6 @@
 # %%
 import pandas as pd
+import pandas as corr
 from pandas.io.parsers import read_csv
 
 import numpy as np
@@ -44,11 +45,13 @@ model.fit(x, y)
 
 a = model.coef_
 b = model.intercept_
+df_corr = df_x.corr()
 
 # グラフを表示する場合
 print("回帰係数:" , a)
 print("切片: ", b)
 print("決定係数: ", model.score(x, y))
+print("相関係数: ",df_corr)
 
 # グラフを表示せず結果のみ知りたい場合
 # print("回帰係数:" , model.coef_)
