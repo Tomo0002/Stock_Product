@@ -6,6 +6,7 @@ from sklearn.neural_network import MLPClassifier
 # 出典：「全国の人流オープンデータ」（国土交通省）（https://www.geospatial.jp/ ckan/dataset/mlit-1km-fromto）
 df = pd.read_csv("Data\滞在人口データ\兵庫県_滞在人口1_2月.csv")
 
+# 「全国の人流オープンデータ」（国土交通省）（https://www.geospatial.jp/ckan/dataset/mlit-1km-fromto）を加工して作成
 # メッシュID:28110 神戸市中央区　兵庫県 28 
 df_Kobe = df.query('citycode == 28110' and 'timezone == 1')
 
