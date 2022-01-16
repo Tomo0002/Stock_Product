@@ -29,8 +29,6 @@ print(model.score(X_test, y_test))
 
 model.plt(X_train, y_train)
 
-plt.show
-
 # 使用するデータの読み込み 
 
 
