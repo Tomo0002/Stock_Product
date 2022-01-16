@@ -1,10 +1,14 @@
+from matplotlib.pyplot import text
 import pandas as pd
 import numpy as np
 import datetime
 from numpy.lib.function_base import average
+import glob
+import os
 
 # データ取得
 df = pd.read_csv("Data\売上データ全体.csv")
+
 
 # 気象データを取得　(作成中)
 # url = "https://www.data.jma.go.jp/obd/stats/data/mdrr/tem_rct/alltable/mxtemsadext00_rct.csv"
@@ -12,12 +16,12 @@ df = pd.read_csv("Data\売上データ全体.csv")
 # df_1 = pd.read_csv(io.BytesIO(r), sep = ";")
 # ↑　https://ibuki-study.net/csv_from_url_by_python/
 
-
     
 # 条件指定
 # print(df[df["在庫量"] > 100])
 
 # 条件分岐
+
 
 Stocksituation = [
     (df["在庫量"] == 0),
@@ -57,7 +61,3 @@ print(f"平均売上個数{Ave_Sales.round(2)}個")
 
 # CSVに出力
 df.to_csv("Sample.csv", encoding = "utf-8")
-
-
-
-
