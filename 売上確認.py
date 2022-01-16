@@ -1,9 +1,7 @@
-from unicodedata import category
 import pandas as pd
 import numpy as np
 import datetime
 from numpy.lib.function_base import average
-import os
 
 # データ取得
 df = pd.read_csv("Data\売上データ全体.csv")
