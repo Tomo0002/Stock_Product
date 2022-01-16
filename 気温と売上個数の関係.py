@@ -10,7 +10,7 @@ from matplotlib import pyplot as plt
 from sklearn import linear_model
 
 
-df_x = read_csv("Data\売上データ.csv", usecols=[1, 2], encoding='utf-8')
+df_x = read_csv("Data\売上データ全体.csv", usecols=[1, 2], encoding='utf-8')
 df_y = read_csv("Data\Test.csv", usecols=[1, 2], encoding='utf-8')
 
 # データ確認
