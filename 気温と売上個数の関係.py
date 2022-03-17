@@ -31,7 +31,7 @@ model.fit(x, y)
 
 # a = model.coef_
 # b = model.intercept_
-# df_corr = df_x.corr()
+df_corr = df_x.corr()
 
 print("回帰係数:" , model.coef_)
 print("切片: ", model.intercept_)
